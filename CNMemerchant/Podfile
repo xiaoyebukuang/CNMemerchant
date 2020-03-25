@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+target 'CNMemerchant' do
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'MJRefresh', '~> 3.2.2'
+pod 'AFNetworking', '~> 3.2.0'
+pod 'SDWebImage', '~> 4.4.3'
+pod 'IQKeyboardManager', '~> 6.0.2'
+pod 'Masonry', '~> 1.1.0'
+pod 'FLAnimatedImage', '~> 1.0.12'
+pod 'YYWebImage'
+
+end

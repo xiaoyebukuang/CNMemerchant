@@ -1,0 +1,84 @@
+//
+//  PrefixHeader.pch
+//  XYBKDemo
+//
+//  Created by 陈晓 on 2018/4/26.
+//  Copyright © 2018年 XYBK. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+
+/** 宏定义 */
+#import <UIKit/UIKit.h>
+#import "DimensMacros.h"
+#import "UtilsMacros.h"
+#import "PathMacros.h"
+#import "NotificationMacros.h"
+/** 请求 */
+#import "RequestMacros.h"
+#import "XYNetworkingHandle.h"
+/** 类别 */
+#import "UIButton+Helper.h"
+#import "UILabel+Helper.h"
+#import "UIColor+Helper.h"
+#import "MBProgressHUD+Helper.h"
+#import "NSString+Helper.h"
+#import "NSDate+Helper.h"
+#import "UIView+Helper.h"
+#import "UIDevice+Helper.h"
+#import "NSDictionary+DeUTF.h"
+#import "UIImage+Helper.h"
+#import "NSString+URL.h"
+#import "NSDecimalNumber+Helper.h"
+#import "NSMutableDictionary+Extention.h"
+#import "UIScrollView+Helper.h"
+//#import "UIViewController+ApplePay.h"
+
+/** 公共model */
+#import "UserModel.h"
+//#import "UserVipModel.h"
+//#import "UserLocationModel.h"
+//#import "UserSwitchModel.h"
+//#import "UserCarManager.h"
+//#import "UserRequestHandle.h"
+/** 公共view */
+#import "CommonButtonView.h"
+#import "UILineView.h"
+//#import "UINotificationView.h"
+//#import "CommonBottomView.h"
+//#import "CommonBarView.h"
+//#import "CommonNewBarView.h"
+#import "CommonInfoView.h"
+//#import "UIStarRateView.h"
+//#import "UIBottomAlertView.h"
+//#import "UIPanScrollView.h"
+//#import "CommonSubmitSuccessView.h"
+//#import "UIScreenInfoView.h"
+//#import "UIProjectAlertView.h"
+/** 工具 */
+#import "UIJudgeTool.h"
+#import "UIAlertViewTool.h"
+#import "UITextFieldTool.h"
+//#import "XYBannerViewTool.h"
+//#import "UITextViewTool.h"
+#import "XYPageControl.h"
+/** 三方库 */
+//#import <YYWebImage/YYWebImage.h>
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import <Masonry.h>
+//#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+//#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+//#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+//#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+//#import <BMKLocationkit/BMKLocationComponent.h>//定位
+//#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+////#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+//
+//#import <UMAnalytics/MobClick.h>//友盟点击统计
+
+#endif /* PrefixHeader_pch */
