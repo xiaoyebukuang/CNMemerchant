@@ -64,12 +64,15 @@
 - (void)cancelBtnEvent {
     UIAlertFieldView *alertView = [[UIAlertFieldView alloc]initWithAlertFieldType:UIAlertFieldTypeSure];
     [alertView showAlertSureWithTitle:@"是否确认取消订单" callBack:^(NSInteger index) {
-        [RequestMacros virtualBusiness_orderCancelView:self.view parameters:@{@"orderNo":self.orderModel.orderNo,@"cancelType":@"1"} success:^(NSDictionary * _Nonnull obj, NSString * _Nonnull resultDesc) {
-            self.orderModel.state = 3;
-            [self reloadView];
-        } failure:^(ErrorType errorType, NSString * _Nonnull mes, NSString * _Nonnull resultCode) {
-            
-        }];
+        if (index == 1) {
+            [RequestMacros virtualBusiness_orderCancelView:self.view parameters:@{@"orderNo":self.orderModel.orderNo,@"cancelType":@"1"} success:^(NSDictionary * _Nonnull obj, NSString * _Nonnull resultDesc) {
+                [self needToReloadView];
+            } failure:^(ErrorType errorType, NSString * _Nonnull mes, NSString * _Nonnull resultCode) {
+                if ([resultCode isEqualToString:@"16317"]) {
+                    [self needToReloadView];
+                }
+            }];
+        }
     }];
 }
 #pragma mark -- OrderDetailHeaderViewDelegate

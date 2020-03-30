@@ -82,8 +82,7 @@
 }
 #pragma mark -- event
 - (void)resetBtnEvent {
-    LoginFirstViewController *loginFirstVC = [[LoginFirstViewController alloc]init];
-    loginFirstVC.loginHeaderType = LoginHeaderReset;
+    LoginFirstViewController *loginFirstVC = [[LoginFirstViewController alloc]initWithLoginHeaderType:LoginHeaderReset];
     [self.navigationController pushViewController:loginFirstVC animated:YES];
 }
 #pragma mark -- request

@@ -71,7 +71,8 @@
     self.chiledView02.valueLabel.text = [NSString stringWithFormat:@"%@L",orderModel.oilLiters];
     self.chiledView03.valueLabel.text = [NSString stringWithFormat:@"¥%@",orderModel.amount];
     self.cardNoL.text = [NSString stringWithFormat:@"卡号：%@",orderModel.virtualOilcard];
-    self.dateL.text = orderModel.createDateStr; 
+    NSString *updateDateS = orderModel.updateDateStr.length != 0 ? orderModel.updateDateStr:orderModel.createDateStr;
+    self.dateL.text = [NSString stringWithFormat:@"%@更新",updateDateS];
 }
 #pragma mark -- setup
 - (UIView *)infoView {
@@ -169,7 +170,7 @@
 }
 - (HomeOrderChildView *)chiledView01 {
     if (!_chiledView01) {
-        _chiledView01 = [[HomeOrderChildView alloc]initWithTitle:@"油卡"];
+        _chiledView01 = [[HomeOrderChildView alloc]initWithTitle:@"油品"];
         _chiledView01.keyLabel.textColor = [UIColor color_666666];
         _chiledView01.keyLabel.font = SYSTEM_FONT_12;
         _chiledView01.valueLabel.textColor = [UIColor color_333333];

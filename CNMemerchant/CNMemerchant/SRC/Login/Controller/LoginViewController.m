@@ -57,7 +57,7 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
     } failure:^(ErrorType errorType, NSString * _Nonnull mes, NSString * _Nonnull resultCode) {
         if ([resultCode isEqualToString:@"16303"]) {
             //未绑定手机号
-            LoginFirstViewController *loginFirstVC = [[LoginFirstViewController alloc]init];
+            LoginFirstViewController *loginFirstVC = [[LoginFirstViewController alloc]initWithLoginHeaderType:LoginHeaderFirst];
             loginFirstVC.account = self.account;
             [self.navigationController pushViewController:loginFirstVC animated:YES];
         } else {

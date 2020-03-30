@@ -143,18 +143,16 @@ static NSString * const CalenderHeaderViewID = @"CalenderHeaderViewID";
                         isToday = YES;
                         model.showDay = @"今天";
                         colorChange = YES;
-                    } else if (compareCmps.day == 1 && compareCmps.month == 0 && compareCmps.year == 0){
-                        model.showDay = @"明天";
+                    } else if (compareCmps.day == -1 && compareCmps.month == 0 && compareCmps.year == 0){
+                        model.showDay = model.day;
                         colorChange = YES;
-                    } else if (compareCmps.day == 2 && compareCmps.month == 0 && compareCmps.year == 0) {
-                        model.showDay = @"后天";
+                    } else if (compareCmps.day == -2 && compareCmps.month == 0 && compareCmps.year == 0) {
+                        model.showDay = model.day;
                         colorChange = YES;
                     } else {
                         model.showDay = model.day;
                     }
-                    if (self.selectedDateStr == nil) {
-                        model.isSelected = isToday;
-                    } else {
+                    if (self.selectedDateStr != nil) {
                         NSDate *selectedDate = [dateFormatter dateFromString:self.selectedDateStr];
                         NSComparisonResult result = [selectedDate compare:modelDate];
                         if (result == NSOrderedSame) {
@@ -197,7 +195,7 @@ static NSString * const CalenderHeaderViewID = @"CalenderHeaderViewID";
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self];
-            NSInteger section = 0;
+            NSInteger section = self.dataArray.count - 1;
             for (int i = 0; i < self.dataArray.count; i ++) {
                 NSArray *secArr = self.dataArray[i];
                 for (int j = 0; j < secArr.count; j ++) {
@@ -281,7 +279,7 @@ static NSString * const CalenderHeaderViewID = @"CalenderHeaderViewID";
         flowLayout.headerReferenceSize = CGSizeMake(MAIN_SCREEN_WIDTH, 30);
         flowLayout.itemSize = CGSizeMake(item_width, item_height);
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.calenderWeekView.height, self.width, NAV_CONTENT_HEIGHT - self.calenderWeekView.height) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.calenderWeekView.height, self.width, self.height - self.calenderWeekView.height) collectionViewLayout:flowLayout];
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = YES;
         _collectionView.backgroundColor = [UIColor color_FFFFFF];

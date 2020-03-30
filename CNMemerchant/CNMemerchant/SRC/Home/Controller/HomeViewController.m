@@ -49,7 +49,7 @@ static CGFloat const SECTION_NAME_HEIGHT = 46.0f;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.width.top.equalTo(self.view);
-        make.height.mas_equalTo(MAIN_SCREEN_HEIGHT - TAB_BAR_HEIGHT);
+        make.height.mas_equalTo(NAV_TAB_CONTENT_HEIGHT);
     }];
     [self.tableView registerClass:[HomeTableViewCell class] forCellReuseIdentifier:HomeTableViewCellID];
     [self.tableView registerClass:[HomeStateTableViewCell class] forCellReuseIdentifier:HomeStateTableViewCellID];

@@ -53,7 +53,7 @@ static NSString * const MineSiteInfoTableViewCellID = @"MineSiteInfoTableViewCel
     MineSiteInfoTableViewCell *cell = (MineSiteInfoTableViewCell *)[tableView dequeueReusableCellWithIdentifier: MineSiteInfoTableViewCellID];
     UserModel *userModle = [UserModel sharedInstance];
     NSArray *keys = @[@"站点名称",@"营业时间",@"地址",@"联系电话"];
-    NSArray *values = @[userModle.stationName,userModle.openingTimeStr,userModle.address,userModle.telephone];
+    NSArray *values = @[userModle.stationName,userModle.openingTimeStr,userModle.address,userModle.contactNumber];
     [cell reloadViewWithTitle:keys[indexPath.row] content:values[indexPath.row]];
     return cell;
 }

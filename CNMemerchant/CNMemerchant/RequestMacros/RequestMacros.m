@@ -211,8 +211,9 @@ static RequestMacros *_requestMacros = nil;
             success(obj,resultDesc);
         }
     } failure:^(ErrorType errorType, NSString *mes, NSString *resultCode) {
-        [MBProgressHUD showError:mes ToView:view];
-        failure(errorType, mes, resultCode);
+        [MBProgressHUD showError:mes ToView:view completeBlcok:^{
+            failure(errorType, mes, resultCode);
+        }];
     }];
 }
 

@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *address;
 /** 联系电话 */
 @property (nonatomic, copy) NSString *telephone;
+@property (nonatomic, copy) NSString *contactNumber;
 /** 油站编码 */
 @property (nonatomic, copy) NSString *stationCode;
 

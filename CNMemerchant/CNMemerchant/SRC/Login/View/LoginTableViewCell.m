@@ -99,6 +99,7 @@
             self.textFieldTool.fieldType = UITextFieldToolNumberCharacter;
             self.textFieldTool.maxCount = 15;
             self.textFieldTool.placeholderStr = @"请输入密码";
+            self.textFieldTool.secureTextEntry = YES;
         }
             break;
         case LoginTextFieldOriginalPW:
@@ -107,6 +108,7 @@
             self.textFieldTool.fieldType = UITextFieldToolNumberCharacter;
             self.textFieldTool.maxCount = 15;
             self.textFieldTool.placeholderStr = @"请输入原始密码";
+            self.textFieldTool.secureTextEntry = YES;
         }
             break;
         case LoginTextFieldOldPW:
@@ -115,6 +117,7 @@
             self.textFieldTool.fieldType = UITextFieldToolNumberCharacter;
             self.textFieldTool.maxCount = 15;
             self.textFieldTool.placeholderStr = @"请输入旧密码";
+            self.textFieldTool.secureTextEntry = YES;
         }
             break;
         case LoginTextFieldNewPW:
@@ -123,6 +126,7 @@
             self.textFieldTool.fieldType = UITextFieldToolNumberCharacter;
             self.textFieldTool.maxCount = 15;
             self.textFieldTool.placeholderStr = @"支持8-15位数字、大小写字母";
+            self.textFieldTool.secureTextEntry = YES;
         }
             break;
         case LoginTextFieldAgainNewPW:
@@ -131,6 +135,7 @@
             self.textFieldTool.fieldType = UITextFieldToolNumberCharacter;
             self.textFieldTool.maxCount = 15;
             self.textFieldTool.placeholderStr = @"支持8-15位数字、大小写字母";
+            self.textFieldTool.secureTextEntry = YES;
         }
             break;
         case LoginTextFieldTel:

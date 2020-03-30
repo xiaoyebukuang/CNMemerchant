@@ -30,10 +30,19 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
 /** 验证码 */
 @property (nonatomic, copy) NSString *verifyCode;
 
+/** 是否重置密码 */
+@property (nonatomic, assign) LoginHeaderType loginHeaderType;
+
 @end
 
 @implementation LoginFirstViewController
-
+- (instancetype)initWithLoginHeaderType:(LoginHeaderType)loginHeaderType {
+    self = [super init];
+    if (self) {
+        self.loginHeaderType = loginHeaderType;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
@@ -52,7 +61,11 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
 - (void)virtualBusiness_accountResetPassword {
     NSString *errorStr;
     if (self.initialPassword.length == 0) {
-        errorStr = @"请输入原始密码";
+        if (self.loginHeaderType == LoginHeaderReset) {
+            errorStr = @"请输入旧密码";
+        } else {
+            errorStr = @"请输入原始密码";
+        }
     } else if (self.password.length == 0) {
         errorStr = @"请输入新密码";
     } else if (self.confirmPassword.length == 0) {
@@ -63,6 +76,12 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
         errorStr = @"请输入验证码";
     } else if (![self.password isEqualToString:self.confirmPassword]) {
         errorStr = @"新密码和确认密码不一致";
+    } else if ([self.initialPassword isEqualToString:self.password]) {
+        if (self.loginHeaderType == LoginHeaderReset) {
+            errorStr = @"新密码与旧密码相同，请重新输入";
+        } else {
+            errorStr = @"新密码与原始密码相同，请重新输入";
+        }
     }
     if (errorStr.length > 0) {
         [MBProgressHUD showError:errorStr ToView:self.view];

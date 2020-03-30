@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"选择日期";
+    self.view.backgroundColor = [UIColor color_FFFFFF];
     [self setupUI];
 }
 - (void)setupUI {
@@ -35,7 +36,7 @@
 #pragma mark -- setup
 - (CalenderView *)calenderView {
     if (!_calenderView) {
-        _calenderView = [[CalenderView alloc]initWithFrame:self.view.bounds startDay:self.startDateStr endDay:self.endDateStr];
+        _calenderView = [[CalenderView alloc]initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, NAV_CONTENT_HEIGHT - IPHONEX_BOTTOW_HEIGHT) startDay:self.startDateStr endDay:self.endDateStr];
         _calenderView.selectedDateStr = self.selectDateStr;
         _calenderView.delegate = self;
     }

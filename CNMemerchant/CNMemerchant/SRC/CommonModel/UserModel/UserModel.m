@@ -61,6 +61,9 @@
 - (NSString *)telephone {
     return [NSString safe_string:self.dataDic[@"telephone"]];
 }
+- (NSString *)contactNumber {
+    return [NSString safe_string:self.dataDic[@"contactNumber"]];
+}
 - (NSString *)stationCode {
     return [NSString safe_string:self.dataDic[@"stationCode"]];
 }
@@ -86,6 +89,8 @@
 - (void)signOut {
     self.loginState =   NO;
     self.dataDic = [[NSDictionary alloc]init];
+    [[NSUserDefaults standardUserDefaults]setObject:@{} forKey:USERDEFAULTS_USER_DATA];
+    [[NSUserDefaults standardUserDefaults]synchronize];
     AppDelegate *appd = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appd setRootViewControoler];
 }

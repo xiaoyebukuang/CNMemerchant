@@ -28,7 +28,8 @@ static NSString * const APP_MD5_KEY = @"0a5737ca40ce36f55004a93bda149f37";
     [par setValue:machineCode forKey:@"deviceNo"];
     [par setValue:[UIDevice getAppVersion] forKey:@"appVersion"];
     [par setValue:[UserModel sharedInstance].sessionToken forKey:@"sessionToken"];
-    if ([UserModel sharedInstance].account.length != 0) {
+    NSString *account = [NSString safe_string:par[@"account"]];
+    if (account.length == 0) {
         [par setValue:[UserModel sharedInstance].account forKey:@"account"];
     }
     [par setValue:idfa forKey:@"idfa"];

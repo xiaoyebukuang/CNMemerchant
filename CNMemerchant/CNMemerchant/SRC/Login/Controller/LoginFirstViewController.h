@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LoginFirstViewController : BasePlainTableViewController
 
+
+- (instancetype)initWithLoginHeaderType:(LoginHeaderType)loginHeaderType;
+
 /** 账号 */
 @property (nonatomic, copy) NSString *account;
-
-/** 是否重置密码 */
-@property (nonatomic, assign) LoginHeaderType loginHeaderType;
 
 @end
 

@@ -442,8 +442,10 @@
     UIColor *color = UIColorFromRGB(0x2296FF);
     return color;
 }
-
-
++ (UIColor *)color_FF5C33 {
+    UIColor *color = UIColorFromRGB(0xFF5C33);
+    return color;
+}
 
 + (UIColor *)color_FF9B0A {
     UIColor *color = UIColorFromRGB(0xFF9B0A);

@@ -60,11 +60,19 @@
         self.amount = [NSString safe_string:dic[@"amount"]];
         self.orderNo = [NSString safe_string:dic[@"orderNo"]];
         self.virtualOilcard = [NSString safe_string:dic[@"virtualOilcard"]];
+        if (self.virtualOilcard.length >= 8) {
+            NSString *muStr = @"";
+            for (int i = 0; i < self.virtualOilcard.length - 8; i ++) {
+                muStr = [muStr stringByAppendingString:@"*"];
+            }
+            self.virtualOilcard = [self.virtualOilcard stringByReplacingCharactersInRange:NSMakeRange(4, self.virtualOilcard.length - 8) withString:muStr];
+        }
         self.stationCode = [NSString safe_string:dic[@"stationCode"]];
         self.userCode = [NSString safe_string:dic[@"userCode"]];
         self.delState = [NSString safe_int:dic[@"delState"]];
         self.createDateStr = [NSString safe_string:dic[@"createDateStr"]];
         self.cancelType = [NSString safe_int:dic[@"cancelType"]];
+        self.updateDateStr = [NSString safe_string:dic[@"updateDateStr"]];
     }
     return self;
 }

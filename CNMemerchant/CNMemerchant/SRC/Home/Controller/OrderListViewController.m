@@ -108,11 +108,7 @@ static NSString * const HomeStateTableViewCellID = @"HomeStateTableViewCellID";
     CalenderViewController *calenderVC = [[CalenderViewController alloc]init];
     calenderVC.startDateStr = [NSDate getDateStrWithDate:[NSDate date] afterSecond:-60*60*24*365 formatType:FormatyyyyMd];
     calenderVC.endDateStr = [NSDate getDateStrWithDate:[NSDate date] formatType:FormatyyyyMd];
-    if (self.queryDate.length == 0) {
-        calenderVC.selectDateStr = [NSDate getDateStrWithDate:[NSDate date] formatType:FormatyyyyMd];
-    } else {
-        calenderVC.selectDateStr = self.queryDate;
-    }
+    calenderVC.selectDateStr = self.queryDate;
     calenderVC.delegate = self;
     [self.navigationController pushViewController:calenderVC animated:YES];
 }

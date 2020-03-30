@@ -73,6 +73,8 @@ typedef NS_ENUM(NSInteger, OrderState) {
 @property (nonatomic, assign) NSInteger delState;
 /** 订单创建时间 */
 @property (nonatomic, copy) NSString *createDateStr;
+/** 订单更新时间 */
+@property (nonatomic, copy) NSString *updateDateStr;
 
 /** 取消方式 */
 @property (nonatomic, assign) NSInteger cancelType;
