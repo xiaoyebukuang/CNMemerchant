@@ -12,6 +12,7 @@
 #import "CustomTabBarController.h"
 #import "CustomNavigationController.h"
 #import "LoginViewController.h"
+#import "GuidePageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -29,16 +30,26 @@
     return YES;
 }
 - (void)setRootViewControoler {
-    UserModel *userModel = [UserModel sharedInstance];
-    if (userModel.loginState) {
-        CustomTabBarController *tabBarVC = [[CustomTabBarController alloc]init];
-        self.window.rootViewController = tabBarVC;
+    //保存的版本号
+    NSString *oldVersion = [[NSUserDefaults standardUserDefaults] stringForKey:USERDEFAULTS_APP_VERSION];
+    //当前的版本号
+    NSString *currentVersion = [UIDevice getAppVersion];
+    if (![oldVersion isEqualToString:currentVersion]) {
+        GuidePageViewController *guidePVC = [[GuidePageViewController alloc]init];
+        self.window.rootViewController = guidePVC;
         [self.window makeKeyAndVisible];
     } else {
-        LoginViewController *loginVC = [[LoginViewController alloc]init];
-        CustomNavigationController *loginNC = [[CustomNavigationController alloc]initWithRootViewController:loginVC];
-        self.window.rootViewController = loginNC;
-        [self.window makeKeyAndVisible];
+        UserModel *userModel = [UserModel sharedInstance];
+        if (userModel.loginState) {
+            CustomTabBarController *tabBarVC = [[CustomTabBarController alloc]init];
+            self.window.rootViewController = tabBarVC;
+            [self.window makeKeyAndVisible];
+        } else {
+            LoginViewController *loginVC = [[LoginViewController alloc]init];
+            CustomNavigationController *loginNC = [[CustomNavigationController alloc]initWithRootViewController:loginVC];
+            self.window.rootViewController = loginNC;
+            [self.window makeKeyAndVisible];
+        }
     }
 }
 

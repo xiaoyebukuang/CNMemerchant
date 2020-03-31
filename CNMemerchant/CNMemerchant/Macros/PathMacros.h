@@ -28,6 +28,9 @@
 
 #define Normal_Spcae               15.0f
 
+//版本号
+#define USERDEFAULTS_APP_VERSION                    @"app_version"
+
 
 static CGFloat const COMMON_CELL_HEIGHT = 54.0f;
 

@@ -100,6 +100,7 @@
 		651A9FF9240E58FF005DBA95 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A9FF8240E58FF005DBA95 /* LoginViewController.m */; };
 		651A9FFC240E5A97005DBA95 /* LoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651A9FFB240E5A97005DBA95 /* LoginHeaderView.m */; };
 		652D67152411E7E30071F876 /* OrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652D67142411E7E30071F876 /* OrderListViewController.m */; };
+		6562536A24330D6B0090DB01 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562536824330D6A0090DB01 /* GuidePageViewController.m */; };
 		6563E182241F7B61000468F0 /* BusinessOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563E181241F7B61000468F0 /* BusinessOrderModel.m */; };
 		6563E185241F8915000468F0 /* HomeStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563E184241F8915000468F0 /* HomeStateTableViewCell.m */; };
 		6563E18824209FF6000468F0 /* ProduceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563E18724209FF6000468F0 /* ProduceListModel.m */; };
@@ -301,6 +302,8 @@
 		651A9FFB240E5A97005DBA95 /* LoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginHeaderView.m; sourceTree = "<group>"; };
 		652D67132411E7E30071F876 /* OrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListViewController.h; sourceTree = "<group>"; };
 		652D67142411E7E30071F876 /* OrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListViewController.m; sourceTree = "<group>"; };
+		6562536824330D6A0090DB01 /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
+		6562536924330D6B0090DB01 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
 		6563E180241F7B61000468F0 /* BusinessOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessOrderModel.h; sourceTree = "<group>"; };
 		6563E181241F7B61000468F0 /* BusinessOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessOrderModel.m; sourceTree = "<group>"; };
 		6563E183241F8915000468F0 /* HomeStateTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeStateTableViewCell.h; sourceTree = "<group>"; };
@@ -413,6 +416,8 @@
 				651A9E75240D0E5B005DBA95 /* SRC */,
 				651A9DF2240CE444005DBA95 /* AppDelegate.h */,
 				651A9DF3240CE444005DBA95 /* AppDelegate.m */,
+				6562536924330D6B0090DB01 /* GuidePageViewController.h */,
+				6562536824330D6A0090DB01 /* GuidePageViewController.m */,
 				651A9DFB240CE444005DBA95 /* Main.storyboard */,
 				651A9DFE240CE448005DBA95 /* Assets.xcassets */,
 				651A9E00240CE448005DBA95 /* LaunchScreen.storyboard */,
@@ -1309,6 +1314,7 @@
 				651A9E17240CF244005DBA95 /* RequestMacros.m in Sources */,
 				6563E19A24220F10000468F0 /* UIAlertFieldView.m in Sources */,
 				651A9FA0240D1503005DBA95 /* XYPhotoBrowserImageView.m in Sources */,
+				6562536A24330D6B0090DB01 /* GuidePageViewController.m in Sources */,
 				651A9E6E240D0C43005DBA95 /* GTMBase64.m in Sources */,
 				6563E1972421EF7E000468F0 /* OrderDetailBottomView.m in Sources */,
 				651A9FF3240E58C6005DBA95 /* BaseMultiViewController.m in Sources */,

@@ -70,7 +70,7 @@
     self.chiledView01.valueLabel.text = orderModel.oilName;
     self.chiledView02.valueLabel.text = [NSString stringWithFormat:@"%@L",orderModel.oilLiters];
     self.chiledView03.valueLabel.text = [NSString stringWithFormat:@"¥%@",orderModel.amount];
-    self.cardNoL.text = [NSString stringWithFormat:@"卡号：%@",orderModel.virtualOilcard];
+    self.cardNoL.text = [NSString stringWithFormat:@"卡号：%@",orderModel.virtualOilcardStr];
     NSString *updateDateS = orderModel.updateDateStr.length != 0 ? orderModel.updateDateStr:orderModel.createDateStr;
     self.dateL.text = [NSString stringWithFormat:@"%@更新",updateDateS];
 }

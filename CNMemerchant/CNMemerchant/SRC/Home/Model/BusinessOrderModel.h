@@ -65,6 +65,7 @@ typedef NS_ENUM(NSInteger, OrderState) {
 @property (nonatomic, copy) NSString *orderNo;
 /** 虚拟油卡 */
 @property (nonatomic, copy) NSString *virtualOilcard;
+@property (nonatomic, copy) NSString *virtualOilcardStr;
 /** 油站编码 */
 @property (nonatomic, copy) NSString *stationCode;
 /** 用户code */

@@ -218,6 +218,10 @@
 
 + (UIColor *)color_FF5C33;
 
++ (UIColor *)color_0074FF;
+
++ (UIColor *)color_F2F5FF;
+
 //渐变
 + (UIColor *)color_FF9B0A;
 + (UIColor *)color_FF630B;
