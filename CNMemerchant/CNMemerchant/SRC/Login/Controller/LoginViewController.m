@@ -41,8 +41,6 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
 
 #pragma mark -- request
 - (void)virtualBusiness_accountLogin {
-    self.account = @"XVQRU03296";
-    self.password = @"123456";
     if (self.account.length == 0) {
         [MBProgressHUD showError:@"输入的账号有误，请重新输入"];
         return;

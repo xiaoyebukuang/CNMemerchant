@@ -30,15 +30,15 @@
     return YES;
 }
 - (void)setRootViewControoler {
-    //保存的版本号
-    NSString *oldVersion = [[NSUserDefaults standardUserDefaults] stringForKey:USERDEFAULTS_APP_VERSION];
-    //当前的版本号
-    NSString *currentVersion = [UIDevice getAppVersion];
-    if (![oldVersion isEqualToString:currentVersion]) {
-        GuidePageViewController *guidePVC = [[GuidePageViewController alloc]init];
-        self.window.rootViewController = guidePVC;
-        [self.window makeKeyAndVisible];
-    } else {
+//    //保存的版本号
+//    NSString *oldVersion = [[NSUserDefaults standardUserDefaults] stringForKey:USERDEFAULTS_APP_VERSION];
+//    //当前的版本号
+//    NSString *currentVersion = [UIDevice getAppVersion];
+//    if (![oldVersion isEqualToString:currentVersion]) {
+//        GuidePageViewController *guidePVC = [[GuidePageViewController alloc]init];
+//        self.window.rootViewController = guidePVC;
+//        [self.window makeKeyAndVisible];
+//    } else {
         UserModel *userModel = [UserModel sharedInstance];
         if (userModel.loginState) {
             CustomTabBarController *tabBarVC = [[CustomTabBarController alloc]init];
@@ -50,7 +50,7 @@
             self.window.rootViewController = loginNC;
             [self.window makeKeyAndVisible];
         }
-    }
+//    }
 }
 
 
