@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeTableViewCell : BaseTableViewCell
 
-- (void)reloadViewWithModel:(OrderModel *)orderModel;
+- (void)reloadViewWithModel:(OrderModel *)orderModel isHome:(BOOL)isHome;
 
 @end
 

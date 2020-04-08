@@ -129,7 +129,7 @@ static NSString * const HomeStateTableViewCellID = @"HomeStateTableViewCellID";
     if (self.homeState == HomeStateHasData || (self.homeState == HomeStateLoading && self.businessOrderModel.orderList.count > 0)) {
         OrderModel *orderModel = self.businessOrderModel.orderList[indexPath.row];
         HomeTableViewCell *cell = (HomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier: HomeTableViewCellID];
-        [cell reloadViewWithModel:orderModel];
+        [cell reloadViewWithModel:orderModel isHome:NO];
         return cell;
     } else {
         HomeStateTableViewCell *cell = (HomeStateTableViewCell *)[tableView dequeueReusableCellWithIdentifier: HomeStateTableViewCellID];

@@ -63,7 +63,18 @@
         make.top.equalTo(self.middleView.mas_bottom);
     }];
 }
-- (void)reloadViewWithModel:(OrderModel *)orderModel {
+- (void)reloadViewWithModel:(OrderModel *)orderModel isHome:(BOOL)isHome {
+    if (isHome) {
+        [self.infoView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView);
+            make.bottom.equalTo(self.contentView).mas_offset(-Normal_Spcae);
+        }];
+    } else {
+        [self.infoView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView).mas_offset(Normal_Spcae);
+            make.bottom.equalTo(self.contentView);
+        }];
+    }
     self.orderNoL.text = [NSString stringWithFormat:@"订单号：%@",orderModel.orderNo];
     self.orderStateL.text = orderModel.stateName;
     self.orderStateL.backgroundColor = orderModel.stateColor;
@@ -117,7 +128,7 @@
 }
 - (UILabel *)orderNoL {
     if (!_orderNoL) {
-        _orderNoL = [[UILabel alloc]initWithTextColor:[UIColor color_333333] font:SYSTEM_FONT_14];
+        _orderNoL = [[UILabel alloc]initWithTextColor:[UIColor color_333333] font:SYSTEM_FONT_B_14];
     }
     return _orderNoL;
 }

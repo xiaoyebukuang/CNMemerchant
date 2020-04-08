@@ -57,6 +57,8 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
         errorStr = @"请输入验证码";
     } else if (![self.password isEqualToString:self.confirmPassword]) {
         errorStr = @"新密码和确认密码不一致";
+    } else if (self.password.length < 8) {
+        errorStr = @"新密码至少输入8位";
     }
     if (errorStr.length > 0) {
         [MBProgressHUD showError:errorStr ToView:self.view];
