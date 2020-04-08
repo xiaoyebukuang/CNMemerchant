@@ -69,7 +69,8 @@
 }
 - (UILabel *)desLabel {
     if (!_desLabel) {
-        _desLabel = [[UILabel alloc]initWithText:@"手机号为绑定账号手机号，如需修改请联系您的BD" textColor:[UIColor color_666666] font:SYSTEM_FONT_14];
+        _desLabel = [[UILabel alloc]initWithTextColor:[UIColor color_666666] font:SYSTEM_FONT_14];
+        [_desLabel reloadTitleWithTitle:@"手机号为绑定账号手机号，如需修改请联系您的BD" lineSpacing:10];
         _desLabel.numberOfLines = 0;
         _desLabel.textAlignment = NSTextAlignmentCenter;
     }

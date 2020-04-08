@@ -208,7 +208,7 @@
 
 + (UIColor *)color_FFE9CB;
 
-+ (UIColor *)color_0054FF;
++ (UIColor *)color_3489FF;
 
 + (UIColor *)color_FFC61C;
 

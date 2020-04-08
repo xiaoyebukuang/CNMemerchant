@@ -125,7 +125,7 @@ static NSString * const MineSiteInfoTableViewCellID = @"MineSiteInfoTableViewCel
 }
 - (UILabel *)valueLabel {
     if (!_valueLabel) {
-        _valueLabel = [[UILabel alloc]initWithTextColor:[UIColor color_666666] font:SYSTEM_FONT_14];
+        _valueLabel = [[UILabel alloc]initWithTextColor:[UIColor color_333333] font:SYSTEM_FONT_14];
         _valueLabel.textAlignment = NSTextAlignmentRight;
         _valueLabel.numberOfLines = 2;
     }

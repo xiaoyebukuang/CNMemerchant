@@ -31,7 +31,7 @@ static RequestMacros *_requestMacros = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.requestEnvironment = RequestEnvironmentDev;
+        self.requestEnvironment = RequestEnvironmentUat;
     }
     return self;
 }

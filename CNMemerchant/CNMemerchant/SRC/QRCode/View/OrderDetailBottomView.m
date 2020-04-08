@@ -53,7 +53,7 @@ static NSString * const OrderDetailBottomTableViewCellID = @"OrderDetailBottomTa
 /** 段头view */
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     CommonHeaderTableView *sectionView = [[CommonHeaderTableView alloc]initWithImageName:@"home_list_logo" title:[NSString stringWithFormat:@"订单号：%@",self.orderModel.orderNo]];
-    UILabel *priceL = [[UILabel alloc]initWithText:[NSString stringWithFormat:@"¥%@",self.orderModel.amount] textColor:[UIColor color_FF5C33] font:SYSTEM_FONT_14];
+    UILabel *priceL = [[UILabel alloc]initWithText:[NSString stringWithFormat:@"¥%@",self.orderModel.amount] textColor:[UIColor color_FF5C33] font:SYSTEM_FONT_B_14];
     [sectionView addSubview:priceL];
     [priceL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(sectionView);

@@ -108,7 +108,7 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
 - (UIView *)footerView {
     if (!_footerView) {
         UIView *footerV = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, 180)];
-        UIButton *forgetPwBtn = [UIButton buttonWithTitle:@"忘记密码？" titleColor:[UIColor color_0054FF] font:SYSTEM_FONT_14];
+        UIButton *forgetPwBtn = [UIButton buttonWithTitle:@"忘记密码？" titleColor:[UIColor color_3489FF] font:SYSTEM_FONT_14];
         [forgetPwBtn addTarget:self action:@selector(forgetPwBtnEvent:) forControlEvents:UIControlEventTouchUpInside];
         [footerV addSubview:forgetPwBtn];
         [forgetPwBtn mas_makeConstraints:^(MASConstraintMaker *make) {
