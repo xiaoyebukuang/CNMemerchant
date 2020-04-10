@@ -70,12 +70,7 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
         errorStr = @"加油量已超过限制";
     } else if (self.amount.intValue >= 100000) {
         errorStr = @"消费金额已超过限制";
-    }
-    if (errorStr.length > 0) {
-        [MBProgressHUD showError:errorStr ToView:self.view];
-        return;
-    }
-    if ([self.oilLiters containsString:@"."]) {
+    } else if ([self.oilLiters containsString:@"."] || [self.amount containsString:@"."]) {
         NSArray *oilArray = [self.oilLiters componentsSeparatedByString:@"."];
         if (oilArray.count == 2) {
             NSString *pointStr = oilArray[1];
@@ -83,12 +78,13 @@ static NSString * const LoginTableViewCellID = @"LoginTableViewCellID";
                 errorStr = @"加油量小数输入有误";
             }
         }
-    } else if ([self.amount containsString:@"."]) {
-        NSArray *amountArray = [self.amount componentsSeparatedByString:@"."];
-        if (amountArray.count == 2) {
-            NSString *pointStr = amountArray[1];
-            if (pointStr.length > 2) {
-                errorStr = @"消费金额小数输入有误";
+        if (errorStr.length == 0) {
+            NSArray *amountArray = [self.amount componentsSeparatedByString:@"."];
+            if (amountArray.count == 2) {
+                NSString *pointStr = amountArray[1];
+                if (pointStr.length > 2) {
+                    errorStr = @"消费金额小数输入有误";
+                }
             }
         }
     }
